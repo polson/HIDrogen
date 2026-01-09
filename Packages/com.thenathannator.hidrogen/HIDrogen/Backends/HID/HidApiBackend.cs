@@ -225,7 +225,7 @@ namespace HIDrogen.Backend
 
             // Version may need to be fixed up as well
             ushort version = info.releaseBcd;
-            if (version == 0 && PlatformGetVersionNumber(info.path, out ushort fixedVersion))
+            if (PlatformGetVersionNumber(info.path, out ushort fixedVersion))
                 version = fixedVersion;
 
             // Create final description
